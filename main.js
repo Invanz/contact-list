@@ -5,7 +5,6 @@ function addContact(fullName) {
 }
 function deleteContact(fullName) {
   pos=contactList.indexOf(fullName);
-  console.log(pos)
   contactList.splice(pos, 1);
 }
 function showContacts() {
