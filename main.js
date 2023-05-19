@@ -1,19 +1,22 @@
-let contactList = ["Pepito Pérez", "Tal Cual", "John Doe", "Tin Marín", "Do Pingüé"];
-let pos=null;
-function addContact(fullName) {
-  contactList.push(fullName);
+class Contacto{
+  constructor(id, nombre, apellido, telefono, ciudad, direccion){
+    this.id = id;
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.telefono = telefono;
+    this.ubicacion = [ciudad, direccion];
+  }
 }
-function deleteContact(fullName) {
-  pos=contactList.indexOf(fullName);
+let contactList = [];
+let pos=null;
+function addContact(id, nombre, apellido, telefono, ubicacion, ciudad, direccion) {
+  let contacto = new Contacto(id, nombre, apellido, telefono, ubicacion, ciudad, direccion);
+  contactList.push(contacto); 
+}
+function deleteContact(id) {
+  pos=contactList.indexOf(id);
   contactList.splice(pos, 1);
 }
 function showContacts() {
   console.log(contactList);
 }
-
-addContact("Peranito DeTal");
-showContacts();
-deleteContact("Pepito Pérez");
-showContacts();
-deleteContact("John Doe");
-showContacts();
