@@ -9,8 +9,8 @@ class Contacto{
 }
 let contactList = [];
 let pos=null;
-function addContact(id, nombre, apellido, telefono, ubicacion, ciudad, direccion) {
-  let contacto = new Contacto(id, nombre, apellido, telefono, ubicacion, ciudad, direccion);
+function addContact(id, nombre, apellido, telefono, ciudad, direccion) {
+  let contacto = new Contacto(id, nombre, apellido, telefono, ciudad, direccion);
   contactList.push(contacto); 
 }
 function deleteContact(id) {
@@ -20,3 +20,8 @@ function deleteContact(id) {
 function showContacts() {
   console.log(contactList);
 }
+
+addContact(1, "Arturo", "Guerra", "3105399163", "Medellín", "Carrera 44 # 23 sur-15");
+showContacts();
+deleteContact(1);
+showContacts();
