@@ -20,7 +20,7 @@ function deleteContact(id) {
 function showContacts() {
   console.log(contactList);
 }
-
+showContacts();
 addContact(1, "Arturo", "Guerra", "3105399163", "Medellín", "Carrera 44 # 23 sur-15");
 showContacts();
 deleteContact(1);
